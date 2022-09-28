@@ -12,7 +12,7 @@ const cariSchema = new Schema({
     },
 
     amount: {
-        type: Integer,
+        type: String,
         required: true,
     },
 
@@ -23,6 +23,6 @@ const cariSchema = new Schema({
 
 });
 
-const Cari = mongoose.model("Photo", cariSchema)
+const Cari = mongoose.model("Cari", cariSchema)
 
 export default Cari;

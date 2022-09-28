@@ -1,6 +1,8 @@
 import express from "express";
 import dotenv from "dotenv";
 import muh from "./database.js";
+import pageRoute from "./routes/pageRoute.js";
+import cariRoute from "./routes/cariRoute.js";
 
 dotenv.config();
 muh()
@@ -10,22 +12,10 @@ const port = process.env.PORT;
 app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
+app.use(express.json());
 
-app.get('/about', (req,res) => {
-    res.render('about');
-});
-
-app.get('/', (req,res) => {
-    res.render('index');
-});
-
-app.get('/bird', (req,res) => {
-    res.render('bird');
-});
-
-app.get('/contact', (req,res) => {
-    res.render('contact');
-});
+app.use("/", pageRoute );
+app.use('/bird', cariRoute);
 
 
 app.listen(port, () => {
