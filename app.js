@@ -15,7 +15,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.use("/", pageRoute );
-app.use('/bird', cariRoute);
+app.use('/cari', cariRoute);
 
 
 app.listen(port, () => {

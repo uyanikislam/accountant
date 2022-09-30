@@ -19,10 +19,9 @@ const createCari = async (req, res) => {
 const getAllCaris= async (req,res)=> {
     try {
         const cari = await Cari.find({})
-        res.status(200).json({
-        suceded:true,
-        cari
-    })
+        res.status(200).render('cari',{
+            Cari,
+        });
     }catch(error){
         res.status(500).json({
         succeded:false,

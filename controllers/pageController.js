@@ -1,8 +1,8 @@
 const getIndexPage = (req,res) => {
     res.render("index")
 }
-const getAboutPage = (req,res) => {
-    res.render("About")
+const getCariPage = (req,res) => {
+    res.render("Cari")
 }
 
 const getContactPage = (req,res) => {
@@ -13,4 +13,4 @@ const getBirdPage = (req,res) => {
     res.render("Bird")
 }
 
-export {getIndexPage, getAboutPage, getContactPage, getBirdPage }
+export {getIndexPage, getCariPage, getContactPage, getBirdPage }
